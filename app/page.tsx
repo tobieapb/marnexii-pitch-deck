@@ -34,6 +34,8 @@ export default function PresentationPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const containerRef = useRef<HTMLDivElement>(null)
   const [isScrolling, setIsScrolling] = useState(false)
+  const [touchStart, setTouchStart] = useState<number | null>(null)
+  const [touchEnd, setTouchEnd] = useState<number | null>(null)
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
@@ -65,6 +67,48 @@ export default function PresentationPage() {
   }, [currentSlide, isScrolling])
 
   useEffect(() => {
+    const minSwipeDistance = 50
+
+    const handleTouchStart = (e: TouchEvent) => {
+      setTouchEnd(null)
+      setTouchStart(e.targetTouches[0].clientY)
+    }
+
+    const handleTouchMove = (e: TouchEvent) => {
+      setTouchEnd(e.targetTouches[0].clientY)
+    }
+
+    const handleTouchEnd = () => {
+      if (!touchStart || !touchEnd) return
+
+      const distance = touchStart - touchEnd
+      const isUpSwipe = distance > minSwipeDistance
+      const isDownSwipe = distance < -minSwipeDistance
+
+      if (isUpSwipe && currentSlide < slides.length - 1) {
+        setCurrentSlide((prev) => prev + 1)
+      }
+
+      if (isDownSwipe && currentSlide > 0) {
+        setCurrentSlide((prev) => prev - 1)
+      }
+
+      setTouchStart(null)
+      setTouchEnd(null)
+    }
+
+    window.addEventListener("touchstart", handleTouchStart, { passive: false })
+    window.addEventListener("touchmove", handleTouchMove, { passive: false })
+    window.addEventListener("touchend", handleTouchEnd)
+
+    return () => {
+      window.removeEventListener("touchstart", handleTouchStart)
+      window.removeEventListener("touchmove", handleTouchMove)
+      window.removeEventListener("touchend", handleTouchEnd)
+    }
+  }, [currentSlide, touchStart, touchEnd])
+
+  useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.key === "ArrowDown" || e.key === "ArrowRight") && currentSlide < slides.length - 1) {
         setCurrentSlide((prev) => prev + 1)
@@ -80,7 +124,11 @@ export default function PresentationPage() {
   const CurrentSlideComponent = slides[currentSlide].component
 
   return (
-    <div ref={containerRef} className="relative h-screen w-full overflow-hidden bg-background">
+    <div
+      ref={containerRef}
+      className="relative h-screen w-full overflow-hidden bg-background"
+      style={{ touchAction: "none" }}
+    >
       <div
         className="absolute inset-0 transition-transform duration-700 ease-out"
         style={{
