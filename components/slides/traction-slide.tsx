@@ -32,24 +32,22 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
 
       {/* Content */}
       <div
-        className={`relative z-10 w-full max-w-6xl mx-auto px-8 pt-12 pb-8 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        className={`relative z-10 w-full max-w-6xl mx-auto px-4 md:px-8 pt-8 md:pt-12 pb-6 md:pb-8 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
         <h2
-          className="text-5xl md:text-6xl font-light mb-6 text-center text-balance leading-tight text-foreground relative z-50"
-          style={{ textShadow: "0 4px 12px rgba(0,0,0,0.9)" }}
+          className="text-3xl sm:text-4xl md:text-6xl font-light mb-4 md:mb-6 text-center text-balance leading-tight text-foreground relative z-50"
         >
           Product Demo
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-6">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
           <div>
-            <h3 className="text-2xl font-light mb-4 text-accent">Pilots and Partnerships</h3>
+            <h3 className="text-xl md:text-2xl font-light mb-3 md:mb-4 text-accent">Pilots and Partnerships</h3>
             <div className="space-y-2">
               {partners.map((partner, index) => (
                 <div
                   key={partner}
-                  className={`text-xl text-muted-foreground transition-all duration-500 ${mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}
-                  style={{ transitionDelay: `${(index + 2) * 100}ms` }}
+                  className={`text-base md:text-xl text-muted-foreground transition-all duration-500 ${mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}
                 >
                   • {partner}
                 </div>
@@ -57,7 +55,7 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
             </div>
           </div>
 
-          <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+          <div className="space-y-3 md:space-y-4 text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
             <p className="text-balance">
               Integration partnerships with <span className="text-foreground">HelmCONNECT.</span>
             </p>
@@ -71,8 +69,8 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
           </div>
         </div>
 
-        <div className="mt-8 p-6 border border-border bg-card/50 backdrop-blur-sm">
-          <div className="text-sm text-muted-foreground mb-3">
+        <div className="mt-4 md:mt-8 p-4 md:p-6 border border-border bg-card/50 backdrop-blur-sm">
+          <div className="text-xs md:text-sm text-muted-foreground mb-2 md:mb-3">
             Live Product Video
             <span className="block text-xs mt-1 text-accent">
               Note: The visualization shown is an internal monitoring tool developed by MARNEXII to see what the system
@@ -92,8 +90,8 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
             />
             {/* Play button overlay */}
             <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
-              <div className="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Play className="w-10 h-10 text-primary-foreground ml-1" fill="currentColor" />
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Play className="w-8 h-8 md:w-10 md:h-10 text-primary-foreground ml-1" fill="currentColor" />
               </div>
             </div>
           </a>

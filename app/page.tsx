@@ -132,10 +132,9 @@ export default function PresentationPage() {
   const CurrentSlideComponent = slides[currentSlide].component
 
   return (
-    <div 
-      ref={containerRef} 
+    <div
+      ref={containerRef}
       className="relative h-screen w-full overflow-hidden bg-background"
-      style={{ touchAction: 'none' }} // Prevents native scroll/zoom on mobile
     >
       <div
         className="absolute inset-0 transition-transform duration-700 ease-out"

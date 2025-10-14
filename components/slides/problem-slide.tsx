@@ -28,7 +28,7 @@ export function ProblemSlide({ isActive }: ProblemSlideProps) {
       </div>
 
       {/* Handwritten notes overlay */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 hidden md:block">
         <div className="absolute top-20 left-20 text-6xl font-mono rotate-[-5deg] text-muted-foreground">
           Ship #4721...
         </div>
@@ -39,13 +39,13 @@ export function ProblemSlide({ isActive }: ProblemSlideProps) {
 
       {/* Content */}
       <div
-        className={`relative z-10 max-w-5xl mx-auto px-8 transition-all duration-1000 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        className={`relative z-10 max-w-5xl mx-auto px-4 md:px-8 transition-all duration-1000 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
-        <h2 className="text-6xl md:text-7xl font-light mb-12 text-balance leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-7xl font-light mb-6 md:mb-12 text-balance leading-tight">
           The Oceans Run on <span className="text-primary">Blind Spots</span>
         </h2>
 
-        <div className="space-y-6 text-xl md:text-2xl text-muted-foreground leading-relaxed">
+        <div className="space-y-4 md:space-y-6 text-base sm:text-lg md:text-2xl text-muted-foreground leading-relaxed">
           <p className="text-balance">
             <span className="text-foreground font-medium">90% of global trade</span> moves by sea, and will always do
             so.
@@ -59,13 +59,15 @@ export function ProblemSlide({ isActive }: ProblemSlideProps) {
           <p className="text-balance">
             Operators and regulators make decisions <span className="text-foreground">hours or days late.</span>
           </p>
-          <p className="text-balance mt-8 text-3xl text-foreground">
+          <p className="text-balance mt-6 md:mt-8 text-xl sm:text-2xl md:text-3xl text-foreground">
             They're managing the world's most complex logistics network -{" "}
             <span className="text-destructive">blindfolded.</span>
           </p>
         </div>
 
-        <div className="mt-16 text-sm tracking-wider text-accent uppercase">Blind spots cost billions.</div>
+        <div className="mt-8 md:mt-16 text-xs md:text-sm tracking-wider text-accent uppercase">
+          Blind spots cost billions.
+        </div>
       </div>
     </div>
   )
