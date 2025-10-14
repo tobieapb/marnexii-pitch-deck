@@ -16,7 +16,7 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
     }
   }, [isActive])
 
-  const partners = ["McAllister Towing", "HelmCONNECT"]
+  const partners = ["[TBD] Tug operator with over 50 vessels", "[TBD] Tug operator with 10 vessels", "HelmCONNECT"]
 
   return (
     <div className="relative h-full w-full flex items-start justify-center overflow-hidden">
@@ -32,22 +32,23 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
 
       {/* Content */}
       <div
-        className={`relative z-10 w-full max-w-6xl mx-auto px-4 md:px-8 pt-8 md:pt-12 pb-6 md:pb-8 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        className={`relative z-10 w-full max-w-6xl mx-auto px-4 md:px-8 pt-24 sm:pt-20 md:pt-12 pb-6 md:pb-8 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
         <h2
-          className="text-3xl sm:text-4xl md:text-6xl font-light mb-4 md:mb-6 text-center text-balance leading-tight text-foreground relative z-50"
+          className="text-2xl sm:text-3xl md:text-6xl font-light mb-3 sm:mb-4 md:mb-6 text-center text-balance leading-tight text-foreground relative z-50"
         >
           Product Demo
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
+        <div className="grid md:grid-cols-2 gap-3 sm:gap-4 md:gap-6 mb-3 sm:mb-4 md:mb-6">
           <div>
-            <h3 className="text-xl md:text-2xl font-light mb-3 md:mb-4 text-accent">Pilots and Partnerships</h3>
-            <div className="space-y-2">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-light mb-2 sm:mb-3 md:mb-4 text-accent">Pilots and Partnerships</h3>
+            <div className="space-y-1 sm:space-y-2">
               {partners.map((partner, index) => (
                 <div
                   key={partner}
-                  className={`text-base md:text-xl text-muted-foreground transition-all duration-500 ${mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}
+                  className={`text-sm sm:text-base md:text-xl text-muted-foreground transition-all duration-500 ${mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   • {partner}
                 </div>
@@ -55,7 +56,7 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
             </div>
           </div>
 
-          <div className="space-y-3 md:space-y-4 text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
+          <div className="space-y-2 sm:space-y-3 md:space-y-4 text-xs sm:text-sm md:text-lg text-muted-foreground leading-relaxed">
             <p className="text-balance">
               Integration partnerships with <span className="text-foreground">HelmCONNECT.</span>
             </p>
@@ -69,8 +70,8 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
           </div>
         </div>
 
-        <div className="mt-4 md:mt-8 p-4 md:p-6 border border-border bg-card/50 backdrop-blur-sm">
-          <div className="text-xs md:text-sm text-muted-foreground mb-2 md:mb-3">
+        <div className="mt-3 sm:mt-4 md:mt-8 p-3 sm:p-4 md:p-6 border border-border bg-card/50 backdrop-blur-sm">
+          <div className="text-xs md:text-sm text-muted-foreground mb-1 sm:mb-2 md:mb-3">
             Live Product Video
             <span className="block text-xs mt-1 text-accent">
               Note: The visualization shown is an internal monitoring tool developed by MARNEXII to see what the system
