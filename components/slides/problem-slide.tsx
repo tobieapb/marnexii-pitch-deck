@@ -42,13 +42,12 @@ export function ProblemSlide({ isActive }: ProblemSlideProps) {
         className={`relative z-10 max-w-5xl mx-auto px-4 md:px-8 transition-all duration-1000 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
         <h2 className="text-3xl sm:text-4xl md:text-7xl font-light mb-6 md:mb-12 text-balance leading-tight">
-          The Oceans Run on <span className="text-primary">Blind Spots</span>
+          90% of global trade moves by sea, and will <span className="text-primary">always do so</span>.
         </h2>
 
         <div className="space-y-4 md:space-y-6 text-base sm:text-lg md:text-2xl text-muted-foreground leading-relaxed">
           <p className="text-balance">
-            <span className="text-foreground font-medium">90% of global trade</span> moves by sea, and will always do
-            so.
+            The Oceans Run on <span className="text-muted-foreground">Blind Spots</span>
           </p>
           <p className="text-balance">
             Yet most ports operate on{" "}
