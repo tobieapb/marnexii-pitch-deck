@@ -49,8 +49,8 @@ export function TitleSlide({ isActive }: TitleSlideProps) {
           Mission-critical maritime AI.
         </p>
 
-        <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4">
-          <span className="whitespace-nowrap">A sensing, predictive decision-making, and control layer.</span>
+        <p className="text-sm sm:text-base md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 text-balance">
+          <span className="md:whitespace-nowrap">A sensing, predictive decision-making, and control layer.</span>
         </p>
 
         <div className="mt-8 md:mt-16 text-xs tracking-widest text-muted-foreground uppercase animate-pulse">
