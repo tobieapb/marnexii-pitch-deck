@@ -62,8 +62,8 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
               Integration partnerships with <span className="text-foreground">HelmCONNECT.</span>
             </p>
             <p className="text-balance">
-              Active builds at <span className="text-primary">Fort Maons</span> (personally in San Francisco until Nov
-              8th for Founders Inc Blueprint).
+              Active build at <span className="text-primary">Fort Mason</span> (personally in San Francisco until Nov
+              8th for Founders, Inc's Blueprint).
             </p>
             <p className="text-balance">
               Live ingestion, analytics, and visualization prototypes <span className="text-accent">deployed.</span>
