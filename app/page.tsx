@@ -81,7 +81,7 @@ export default function PresentationPage() {
           x: e.touches[0].clientX - tickerPosition.x,
           y: e.touches[0].clientY - tickerPosition.y,
         })
-        return // Don't process as slide swipe
+        return
       }
 
       setTouchEnd(null)
@@ -95,7 +95,17 @@ export default function PresentationPage() {
           x: e.touches[0].clientX - dragStart.x,
           y: e.touches[0].clientY - dragStart.y,
         })
-        return // Don't process as slide swipe
+        return
+      }
+
+      if (touchStart !== null) {
+        const currentY = e.targetTouches[0].clientY
+        const distance = touchStart - currentY
+        const isVerticalSwipe = Math.abs(distance) > 10
+
+        if (isVerticalSwipe) {
+          e.preventDefault()
+        }
       }
 
       setTouchEnd(e.targetTouches[0].clientY)
@@ -104,7 +114,7 @@ export default function PresentationPage() {
     const handleTouchEnd = () => {
       if (isDraggingTicker) {
         setIsDraggingTicker(false)
-        return // Don't process as slide swipe
+        return
       }
 
       if (!touchStart || !touchEnd) return
@@ -152,11 +162,7 @@ export default function PresentationPage() {
   const CurrentSlideComponent = slides[currentSlide].component
 
   return (
-    <div
-      ref={containerRef}
-      className="relative h-screen w-full overflow-hidden bg-background"
-      style={{ touchAction: "none" }}
-    >
+    <div ref={containerRef} className="relative h-screen w-full overflow-hidden bg-background">
       <div
         className="absolute inset-0 transition-transform duration-700 ease-out"
         style={{
