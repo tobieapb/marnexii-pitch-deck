@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: "(787) 420-1874",
     images: [
       {
-        url: "/founder-workspace-with-maritime-tracking-systems.jpeg",
+        url: "https://pitch.marnexii.com/founder_thumbnail.jpg",
         width: 1200,
         height: 630,
         alt: "Roberto Rivera - Marnexii Founder",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Marnexii - Roberto Rivera",
     description: "(787) 420-1874",
-    images: ["/founder-workspace-with-maritime-tracking-systems.jpeg"],
+    images: ["https://pitch.marnexii.com/founder_thumbnail.jpg"],
   },
 }
 
