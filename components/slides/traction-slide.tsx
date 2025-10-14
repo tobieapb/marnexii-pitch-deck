@@ -32,11 +32,12 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
 
       {/* Content */}
       <div
-        className={`relative z-10 w-full max-w-6xl mx-auto px-4 md:px-8 pt-24 sm:pt-20 md:pt-12 pb-6 md:pb-8 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        className={`relative z-10 w-full max-w-6xl mx-auto px-4 md:px-8 pt-24 sm:pt-80 xl:pt-12 pb-6 md:pb-8 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
         <h2
           className="text-2xl sm:text-3xl md:text-6xl font-light mb-3 sm:mb-4 md:mb-6 text-center text-balance leading-tight text-foreground relative z-50"
         >
+          <br />
           Product Demo
         </h2>
 
