@@ -1,0 +1,102 @@
+"use client"
+
+import { useEffect, useState } from "react"
+
+interface BusinessModelSlideProps {
+  isActive: boolean
+}
+
+export function BusinessModelSlide({ isActive }: BusinessModelSlideProps) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    if (isActive) {
+      setMounted(true)
+    }
+  }, [isActive])
+
+  const tiers = [
+    {
+      number: "1",
+      title: "Signals",
+      description:
+        "Continuous edge data from our receivers and integrations. Licensed as a data feed or subscription API.",
+      color: "border-accent",
+      delay: "200ms",
+    },
+    {
+      number: "2",
+      title: "Predictive Modules",
+      description:
+        "Real-time analytics and anomaly detection designed to plug into HelmCONNECT, ERPs, or port systems.",
+      color: "border-primary",
+      delay: "400ms",
+    },
+    {
+      number: "3",
+      title: "AI Control Layer",
+      description: "Fleet- and port-level decision intelligence, powering scheduling, routing, and automation.",
+      color: "border-foreground",
+      delay: "600ms",
+    },
+  ]
+
+  const partners = ["HelmCONNECT", "SAP", "Navis"]
+
+  return (
+    <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-background" />
+
+      {/* Content */}
+      <div
+        className={`relative z-10 max-w-6xl mx-auto px-8 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      >
+        <h2 className="text-5xl md:text-6xl font-light mb-16 text-balance leading-tight text-center">
+          From <span className="text-primary">Signals</span> to <span className="text-accent">Systems</span>
+        </h2>
+
+        {/* Three-tier stack */}
+        <div className="space-y-6 mb-12">
+          {tiers.map((tier) => (
+            <div
+              key={tier.number}
+              className={`p-8 border-l-4 ${tier.color} bg-card/50 backdrop-blur-sm transition-all duration-700 hover:bg-card/70 ${mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}
+              style={{ transitionDelay: tier.delay }}
+            >
+              <div className="flex items-start gap-6">
+                <div className="text-5xl font-light text-muted-foreground">{tier.number}</div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-light mb-3">{tier.title}</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed text-balance">{tier.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Ecosystem partners */}
+        <div
+          className={`text-center transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          style={{ transitionDelay: "800ms" }}
+        >
+          <div className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">Partner Ecosystem</div>
+          <div className="flex justify-center gap-8 text-xl">
+            {partners.map((partner) => (
+              <div key={partner} className="text-muted-foreground hover:text-primary transition-colors">
+                {partner}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Value proposition */}
+        <div className="mt-12 text-center p-8 border border-accent bg-accent/5 backdrop-blur-sm">
+          <p className="text-2xl text-balance leading-relaxed">
+            Each layer compounds — the more signals we own, the{" "}
+            <span className="text-accent">smarter every connected system becomes.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
