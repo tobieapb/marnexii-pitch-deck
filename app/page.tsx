@@ -37,6 +37,11 @@ export default function PresentationPage() {
   const [touchStart, setTouchStart] = useState<number | null>(null)
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
 
+  const [tickerPosition, setTickerPosition] = useState({ x: 0, y: 0 })
+  const [isDraggingTicker, setIsDraggingTicker] = useState(false)
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 })
+  const tickerRef = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
       if (isScrolling) return
@@ -70,15 +75,38 @@ export default function PresentationPage() {
     const minSwipeDistance = 50
 
     const handleTouchStart = (e: TouchEvent) => {
+      if (tickerRef.current && tickerRef.current.contains(e.target as Node)) {
+        setIsDraggingTicker(true)
+        setDragStart({
+          x: e.touches[0].clientX - tickerPosition.x,
+          y: e.touches[0].clientY - tickerPosition.y,
+        })
+        return // Don't process as slide swipe
+      }
+
       setTouchEnd(null)
       setTouchStart(e.targetTouches[0].clientY)
     }
 
     const handleTouchMove = (e: TouchEvent) => {
+      if (isDraggingTicker) {
+        e.preventDefault()
+        setTickerPosition({
+          x: e.touches[0].clientX - dragStart.x,
+          y: e.touches[0].clientY - dragStart.y,
+        })
+        return // Don't process as slide swipe
+      }
+
       setTouchEnd(e.targetTouches[0].clientY)
     }
 
     const handleTouchEnd = () => {
+      if (isDraggingTicker) {
+        setIsDraggingTicker(false)
+        return // Don't process as slide swipe
+      }
+
       if (!touchStart || !touchEnd) return
 
       const distance = touchStart - touchEnd
@@ -106,7 +134,7 @@ export default function PresentationPage() {
       window.removeEventListener("touchmove", handleTouchMove)
       window.removeEventListener("touchend", handleTouchEnd)
     }
-  }, [currentSlide, touchStart, touchEnd])
+  }, [currentSlide, touchStart, touchEnd, isDraggingTicker, dragStart, tickerPosition])
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -155,7 +183,14 @@ export default function PresentationPage() {
         </Button>
       )}
 
-      <div className="fixed bottom-4 left-4 text-xs text-muted-foreground font-mono">
+      <div
+        ref={tickerRef}
+        className="fixed bottom-4 right-4 md:bottom-4 md:left-4 md:right-auto text-xs text-muted-foreground font-mono cursor-move md:cursor-default select-none bg-background/50 backdrop-blur-sm px-2 py-1 rounded border border-border/50"
+        style={{
+          transform: window.innerWidth < 768 ? `translate(${tickerPosition.x}px, ${tickerPosition.y}px)` : undefined,
+          touchAction: "none",
+        }}
+      >
         {currentSlide + 1} / {slides.length}
       </div>
     </div>
