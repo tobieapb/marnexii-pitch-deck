@@ -41,11 +41,12 @@ export function MarketSlide({ isActive }: MarketSlideProps) {
             className={`grid grid-cols-2 gap-2 sm:gap-3 md:block md:space-y-6 transition-all duration-700 ${mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}
           >
             <div className="p-3 sm:p-4 md:p-8 border-l-4 border-destructive bg-card/50 backdrop-blur-sm">
+              <div className="text-2xl sm:text-3xl md:text-5xl font-light mb-1 text-destructive">$75K</div>
               <div className="text-xs sm:text-sm md:text-lg text-muted-foreground">per day, per idle vessel</div>
             </div>
 
             <div className="p-3 sm:p-4 md:p-8 border-l-4 border-destructive bg-card/50 backdrop-blur-sm">
-              <div className="text-2xl sm:text-3xl md:text-5xl font-light mb-1 text-destructive">$75K</div>
+              <div className="text-2xl sm:text-3xl md:text-5xl font-light mb-1 text-destructive">$5-10M</div>
               <div className="text-xs sm:text-sm md:text-lg text-muted-foreground">daily delays in large ports</div>
             </div>
           </div>
