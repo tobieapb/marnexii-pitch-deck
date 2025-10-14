@@ -55,15 +55,17 @@ export function VisionSlide({ isActive }: VisionSlideProps) {
 
       {/* Content */}
       <div
-        className={`relative z-10 max-w-5xl mx-auto px-8 text-center transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        className={`relative z-10 max-w-5xl mx-auto px-4 sm:px-6 md:px-8 text-center transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
-        <div className="mb-8 text-sm tracking-[0.3em] text-muted-foreground uppercase">Vision</div>
+        <div className="mb-3 sm:mb-6 md:mb-8 text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase">
+          Vision
+        </div>
 
-        <h2 className="text-6xl md:text-7xl font-light mb-12 text-balance leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-7xl font-light mb-6 sm:mb-8 md:mb-12 text-balance leading-tight">
           Mission-Critical, <span className="text-primary">Maritime AI</span>
         </h2>
 
-        <div className="space-y-8 text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-16">
+        <div className="space-y-3 sm:space-y-6 md:space-y-8 text-sm sm:text-lg md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-6 sm:mb-12 md:mb-16">
           <p className="text-balance">
             We're building a <span className="text-foreground">real-time digital twin of maritime ports and ships</span>{" "}
             — a living system that senses, predicts, and acts.
@@ -72,7 +74,7 @@ export function VisionSlide({ isActive }: VisionSlideProps) {
             Marnexii is the <span className="text-accent">AI-powered control and decision layer</span> for harbor
             docking and port operations.
           </p>
-          <p className="text-balance text-2xl">
+          <p className="text-balance sm:text-xl md:text-2xl">
             As global logistics move toward autonomy, we're ensuring the oceans move with them —{" "}
             <span className="text-primary">safely, efficiently, and intelligently.</span>
           </p>
@@ -82,8 +84,8 @@ export function VisionSlide({ isActive }: VisionSlideProps) {
         <div
           className={`transition-all duration-1000 delay-500 ${mounted ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
         >
-          <div className="inline-block p-8 border border-primary bg-primary/5 backdrop-blur-sm">
-            <div className="text-3xl md:text-4xl font-light text-balance leading-tight">
+          <div className="inline-block p-4 sm:p-6 md:p-8 border border-primary bg-primary/5 backdrop-blur-sm">
+            <div className="text-base sm:text-xl md:text-4xl font-light text-balance leading-tight">
               <span className="text-primary">Mission-critical, maritime AI.</span>
               <br />
               <span className="text-muted-foreground">A sensing, predictive decision-making, and control layer.</span>
@@ -92,8 +94,10 @@ export function VisionSlide({ isActive }: VisionSlideProps) {
         </div>
 
         {/* Logo */}
-        <div className={`mt-16 transition-all duration-1000 delay-700 ${mounted ? "opacity-100" : "opacity-0"}`}>
-          <div className="text-6xl font-light tracking-tight">MARNEXII</div>
+        <div
+          className={`mt-6 sm:mt-12 md:mt-16 transition-all duration-1000 delay-700 ${mounted ? "opacity-100" : "opacity-0"}`}
+        >
+          <div className="text-3xl sm:text-4xl md:text-6xl font-light tracking-tight">MARNEXII</div>
         </div>
       </div>
     </div>
