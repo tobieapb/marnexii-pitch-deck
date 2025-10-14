@@ -65,13 +65,13 @@ export function SolutionSlide({ isActive }: SolutionSlideProps) {
 
       {/* Content */}
       <div
-        className={`relative z-10 max-w-5xl mx-auto px-8 text-center transition-all duration-1000 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        className={`relative z-10 max-w-5xl mx-auto px-4 md:px-8 text-center transition-all duration-1000 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
-        <h2 className="text-6xl md:text-7xl font-light mb-12 text-balance leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-7xl font-light mb-6 md:mb-12 text-balance leading-tight">
           A Living <span className="text-primary">Digital Twin</span> of Ports and Ships
         </h2>
 
-        <div className="space-y-6 text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+        <div className="space-y-4 md:space-y-6 text-base sm:text-lg md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
           <p className="text-balance">
             Marnexii turns <span className="text-foreground">real-world sensor signals</span> into a unified maritime
             AI.
@@ -79,10 +79,10 @@ export function SolutionSlide({ isActive }: SolutionSlideProps) {
           <p className="text-balance">
             It serves as a <span className="text-accent">sensing, predictive decision-making, and control layer.</span>
           </p>
-          <p className="text-balance text-2xl text-foreground mt-8">
+          <p className="text-balance text-lg sm:text-xl md:text-2xl text-foreground mt-6 md:mt-8">
             From dock operations to fleet movements and global surveillance -
           </p>
-          <p className="text-balance text-2xl text-foreground">
+          <p className="text-balance text-lg sm:text-xl md:text-2xl text-foreground">
             <span className="text-primary">one real-time view</span> of the global maritime waterways.
           </p>
         </div>
