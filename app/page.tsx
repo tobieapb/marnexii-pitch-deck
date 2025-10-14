@@ -185,7 +185,7 @@ export default function PresentationPage() {
 
       <div
         ref={tickerRef}
-        className="fixed bottom-4 right-4 md:bottom-4 md:left-4 md:right-auto text-xs text-muted-foreground font-mono cursor-move md:cursor-default select-none bg-background/50 backdrop-blur-sm px-2 py-1 rounded border border-border/50"
+        className="fixed bottom-2 right-2 md:bottom-4 md:left-4 md:right-auto text-xs text-muted-foreground font-mono cursor-move md:cursor-default select-none bg-background/50 backdrop-blur-sm px-2 py-1 rounded border border-border/50"
         style={{
           transform: window.innerWidth < 768 ? `translate(${tickerPosition.x}px, ${tickerPosition.y}px)` : undefined,
           touchAction: "none",
