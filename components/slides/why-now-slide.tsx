@@ -82,7 +82,7 @@ export function WhyNowSlide({ isActive }: WhyNowSlideProps) {
         <div className="mt-6 md:mt-12 p-4 md:p-8 border border-accent/30 bg-card/50 backdrop-blur-sm">
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed text-balance text-center">
             Data is an evergreen part of the AI process. Big model makers are mostly set (OpenAI, Anthropic, xAI, etc),
-            but they will always need new data to train and ground their models on.
+            but there will always be a need for new data to train and ground AI models on.
           </p>
         </div>
       </div>

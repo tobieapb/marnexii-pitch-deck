@@ -22,7 +22,7 @@ const slides = [
   { id: 2, component: ProblemSlide, title: "The Oceans Run on Blind Spots" },
   { id: 3, component: CapabilitiesSlide, title: "Complete Maritime Observability" },
   { id: 4, component: ShiftSlide, title: "AI is Only as Good as the Data It Sees" },
-  { id: 5, component: SolutionSlide, title: "A Living Digital Twin" },
+  { id: 5, component: SolutionSlide, title: "A Living Digital Twin of Ports, Ships, Sea, and Subsea" },
   { id: 6, component: WhyNowSlide, title: "Maritime's Anduril Moment" },
   { id: 7, component: TractionSlide, title: "Already Trusted by Operators" },
   { id: 8, component: ProductSlide, title: "The System That Sees Everything" },
