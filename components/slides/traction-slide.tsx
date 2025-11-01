@@ -16,7 +16,7 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
     }
   }, [isActive])
 
-  const partners = ["[TBD] Tug operator with over 50 vessels", "[TBD] Tug operator with 10 vessels", "Integration Partner"]
+  const partners = ["[TBD] Tug operator with over 50 vessels", "[TBD] Tug operator with 10 vessels", "[TBD] Integration Partners"]
 
   return (
     <div className="relative h-full w-full flex items-start justify-center overflow-y-auto">
@@ -59,7 +59,7 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
 
           <div className="space-y-2 sm:space-y-3 md:space-y-4 text-xs sm:text-sm md:text-lg text-muted-foreground leading-relaxed">
             <p className="text-balance">
-              Integration partnerships with <span className="text-foreground">Integration Partner.</span>
+              Integration partnerships with <span className="text-foreground">[TBD] Integration Partners.</span>
             </p>
             <p className="text-balance">
               Active build at <span className="text-primary">Fort Mason</span> (personally in San Francisco until Nov

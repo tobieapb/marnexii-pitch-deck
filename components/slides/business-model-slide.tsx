@@ -28,7 +28,7 @@ export function BusinessModelSlide({ isActive }: BusinessModelSlideProps) {
       number: "2",
       title: "Predictive Modules",
       description:
-        "Real-time analytics and anomaly detection designed to plug into Integration Partner, ERPs, or port systems.",
+        "Real-time analytics and anomaly detection designed to plug into [TBD] Integration Partners, ERPs, or port systems.",
       color: "border-primary",
       delay: "400ms",
     },
