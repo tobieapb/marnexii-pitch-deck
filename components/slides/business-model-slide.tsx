@@ -28,7 +28,7 @@ export function BusinessModelSlide({ isActive }: BusinessModelSlideProps) {
       number: "2",
       title: "Predictive Modules",
       description:
-        "Real-time analytics and anomaly detection designed to plug into HelmCONNECT, ERPs, or port systems.",
+        "Real-time analytics and anomaly detection designed to plug into Integration Partner, ERPs, or port systems.",
       color: "border-primary",
       delay: "400ms",
     },
@@ -40,8 +40,6 @@ export function BusinessModelSlide({ isActive }: BusinessModelSlideProps) {
       delay: "600ms",
     },
   ]
-
-  const partners = ["HelmCONNECT", "SAP", "Navis"]
 
   return (
     <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
@@ -73,23 +71,6 @@ export function BusinessModelSlide({ isActive }: BusinessModelSlideProps) {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Ecosystem partners */}
-        <div
-          className={`text-center transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-          style={{ transitionDelay: "800ms" }}
-        >
-          <div className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-4 uppercase tracking-wider">
-            Partner Ecosystem
-          </div>
-          <div className="flex justify-center gap-4 sm:gap-6 md:gap-8 text-base sm:text-lg md:text-xl">
-            {partners.map((partner) => (
-              <div key={partner} className="text-muted-foreground hover:text-primary transition-colors">
-                {partner}
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Value proposition */}
