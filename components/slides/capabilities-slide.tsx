@@ -22,6 +22,11 @@ export function CapabilitiesSlide({ isActive }: CapabilitiesSlideProps) {
       description: "Detect non-AIS and invisible-to-radar small vessels from miles away. Accurately determine threat score.",
     },
     {
+      title: "Critical Infrastructure and Subsea Protection",
+      description:
+        "Safeguard subsea cables and offshore farms from sabotage, trawling, and anchor dragging. Control, deploy, and send interdiction cues to port assets.",
+    },
+    {
       title: "Defense",
       description: "Maritime surveillance to protect strategic maritime zones from emerging risks and intrusions.",
     },
@@ -29,11 +34,6 @@ export function CapabilitiesSlide({ isActive }: CapabilitiesSlideProps) {
       title: "Port and Vessel Efficiency",
       description:
         "Port control, demurrage curtailing, harbor docking, cargo loading, unloading, scheduling, and terminal operations made optimal.",
-    },
-    {
-      title: "Critical Infrastructure Protection",
-      description:
-        "Safeguard subsea cables and offshore farms from sabotage, trawling, and anchor dragging. Control, deploy, and send interdiction cues to port assets.",
     },
     {
       title: "Illegal At-Sea Rendezvous",
@@ -50,12 +50,12 @@ export function CapabilitiesSlide({ isActive }: CapabilitiesSlideProps) {
   const sensors = [
     { name: "AIS", icon: Radio },
     { name: "Camera", icon: Camera },
+    { name: "Sonar & Hydrophone", icon: Speaker },
     { name: "VHF / SAR", icon: Waves },
     { name: "Radar", icon: RadarIcon },
     { name: "4G/5G Starlink", icon: Wifi },
     { name: "Weather", icon: Cloud },
     { name: "Environment", icon: Droplets },
-    { name: "Sonar & Hydrophone", icon: Speaker },
   ]
 
   return (
@@ -83,24 +83,8 @@ export function CapabilitiesSlide({ isActive }: CapabilitiesSlideProps) {
           A multimodal AI built to see what up until now is invisible.
         </p>
 
-        {/* Applications Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8 md:mb-10">
-          {applications.map((app, index) => (
-            <div
-              key={app.title}
-              className={`p-3 sm:p-4 md:p-6 border border-border bg-card/30 backdrop-blur-sm transition-all duration-500 hover:border-primary/50 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <h3 className="text-base sm:text-lg md:text-xl font-light mb-2 text-foreground">{app.title}</h3>
-              <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed">
-                {app.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Sensor Suite */}
-        <div className="border-t border-border pt-4 sm:pt-6 md:pt-8">
+        {/* Sensor Suite - Now First */}
+        <div className="border-b border-border pb-4 sm:pb-6 md:pb-8 mb-6 sm:mb-8 md:mb-10">
           <h3 className="text-lg sm:text-xl md:text-2xl font-light mb-3 sm:mb-4 md:mb-6 text-center text-muted-foreground">
             Sensor Suite Across All Products
           </h3>
@@ -111,7 +95,7 @@ export function CapabilitiesSlide({ isActive }: CapabilitiesSlideProps) {
                 <div
                   key={sensor.name}
                   className={`flex flex-col items-center gap-2 transition-all duration-500 ${mounted ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}
-                  style={{ transitionDelay: `${600 + index * 50}ms` }}
+                  style={{ transitionDelay: `${index * 50}ms` }}
                 >
                   <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full border border-primary/30 bg-primary/5 flex items-center justify-center">
                     <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-primary" />
@@ -122,6 +106,43 @@ export function CapabilitiesSlide({ isActive }: CapabilitiesSlideProps) {
                 </div>
               )
             })}
+          </div>
+        </div>
+
+        {/* Applications - Horizontal scroll on mobile, grid on desktop */}
+        <div>
+          {/* Desktop Grid */}
+          <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {applications.map((app, index) => (
+              <div
+                key={app.title}
+                className={`p-4 md:p-6 border border-border bg-card/30 backdrop-blur-sm transition-all duration-500 hover:border-primary/50 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                style={{ transitionDelay: `${400 + index * 100}ms` }}
+              >
+                <h3 className="text-lg md:text-xl font-light mb-2 text-foreground">{app.title}</h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  {app.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile/Tablet Horizontal Scroll */}
+          <div className="md:hidden overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+            <div className="flex gap-3 pb-4">
+              {applications.map((app, index) => (
+                <div
+                  key={app.title}
+                  className={`flex-shrink-0 w-[85vw] sm:w-[70vw] p-4 border border-border bg-card/30 backdrop-blur-sm snap-center transition-all duration-500 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                  style={{ transitionDelay: `${400 + index * 100}ms` }}
+                >
+                  <h3 className="text-base sm:text-lg font-light mb-2 text-foreground">{app.title}</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                    {app.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
