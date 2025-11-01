@@ -19,7 +19,7 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
   const partners = ["[TBD] Tug operator with over 50 vessels", "[TBD] Tug operator with 10 vessels", "HelmCONNECT"]
 
   return (
-    <div className="relative h-full w-full flex items-start justify-center overflow-hidden">
+    <div className="relative h-full w-full flex items-start justify-center overflow-y-auto">
       {/* Background */}
       <div className="absolute inset-0">
         <img

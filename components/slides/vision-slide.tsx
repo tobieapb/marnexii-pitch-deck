@@ -67,15 +67,10 @@ export function VisionSlide({ isActive }: VisionSlideProps) {
 
         <div className="space-y-3 sm:space-y-6 md:space-y-8 text-sm sm:text-lg md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-6 sm:mb-12 md:mb-16">
           <p className="text-balance">
-            We're building a <span className="text-foreground">real-time digital twin of maritime ports and ships</span>{" "}
-            — a living system that senses, predicts, and acts.
-          </p>
-          <p className="text-balance">
-            Marnexii is the <span className="text-accent">AI-powered control and decision layer</span> for sea and subsea operations, surveillance, and coordination.
+            We're building a <span className="text-foreground">real-time digital twin of maritime ports and ships</span>: a living system that senses, predicts, and acts.
           </p>
           <p className="text-balance sm:text-xl md:text-2xl">
-            As global logistics and security move toward autonomy, we're ensuring the oceans move with them —{" "}
-            <span className="text-primary">safely, efficiently, and intelligently.</span>
+            As global logistics and security move toward autonomy, we're ensuring the oceans move with them: <span className="text-primary">safely, efficiently, and intelligently.</span>
           </p>
         </div>
 
@@ -96,16 +91,16 @@ export function VisionSlide({ isActive }: VisionSlideProps) {
         <div
           className={`mt-6 sm:mt-12 md:mt-16 transition-all duration-1000 delay-700 ${mounted ? "opacity-100" : "opacity-0"}`}
         >
-          <div className="border-t border-border pt-4 sm:pt-6 md:pt-8 max-w-3xl mx-auto">
-            <div className="text-xl sm:text-2xl md:text-3xl font-light mb-2 sm:mb-3 md:mb-4">Let's Talk</div>
-            <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-3 sm:mb-4 md:mb-6">
-              Request a demo or schedule a meeting to discuss deployment in your port or region.
+          <div className="border-t border-border pt-4 sm:pt-6 md:pt-8 max-w-3xl mx-auto text-center">
+            <p className="text-sm sm:text-base md:text-xl text-muted-foreground mb-4 sm:mb-6">
+              Request a demo or schedule a meeting.
             </p>
-            <div className="text-sm sm:text-base md:text-lg text-primary">
-              <a href="mailto:roberto@marnexii.com" className="hover:text-accent transition-colors">
-                roberto@marnexii.com
-              </a>
-            </div>
+            <a
+              href="mailto:roberto@marnexii.com"
+              className="inline-block px-6 sm:px-8 md:px-10 py-3 sm:py-4 border border-primary bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-sm sm:text-base md:text-lg font-light"
+            >
+              Let's Talk
+            </a>
           </div>
         </div>
 

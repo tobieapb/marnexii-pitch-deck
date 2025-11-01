@@ -16,7 +16,7 @@ export function TeamSlide({ isActive }: TeamSlideProps) {
   }, [isActive])
 
   return (
-    <div className="relative h-full w-full flex items-start justify-center overflow-hidden">
+    <div className="relative h-full w-full flex items-start justify-center overflow-y-auto">
       <div className="absolute inset-0">
         <img
           src="/founder-workspace-with-maritime-tracking-systems.jpeg"
@@ -81,7 +81,7 @@ export function TeamSlide({ isActive }: TeamSlideProps) {
             <div className="pt-2 md:pt-4 border-t border-border">
               <p className="text-sm sm:text-base md:text-xl text-balance leading-relaxed">
                 Marnexii bridges <span className="text-primary">operational experience</span> with{" "}
-                <span className="text-accent">engineering precision</span> — connecting maritime reality to AI
+                <span className="text-accent">engineering precision</span>, connecting maritime reality to AI
                 infrastructure.
               </p>
             </div>
