@@ -24,7 +24,7 @@ const slides = [
   { id: 4, component: ShiftSlide, title: "AI is Only as Good as the Data It Sees" },
   { id: 5, component: SolutionSlide, title: "A Living Digital Twin of Ports, Ships, Sea, and Subsea" },
   { id: 6, component: WhyNowSlide, title: "Maritime's Anduril Moment" },
-  { id: 7, component: TractionSlide, title: "Already Trusted by Operators" },
+  { id: 7, component: TractionSlide, title: "Product Demo" },
   { id: 8, component: ProductSlide, title: "The System That Sees Everything" },
   { id: 9, component: MarketSlide, title: "Trillion-Dollar System" },
   { id: 10, component: BusinessModelSlide, title: "From Signals to Systems" },
