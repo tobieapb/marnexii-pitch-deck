@@ -20,6 +20,61 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Deployment
+
+This project uses a custom deployment script that builds, stages, and runs the app with PM2.
+
+### Quick Deploy (Recommended)
+
+Fast deployment when only code has changed (no dependency updates):
+
+```bash
+./scripts/deploy_marnexii.sh --letsgo --noci
+```
+
+This will:
+- Build the app (skipping `npm ci` for speed)
+- Stage to `/opt/marnexii-pitch-deck`
+- Deploy with PM2 (single instance)
+
+### Full Deploy
+
+When dependencies have changed:
+
+```bash
+./scripts/deploy_marnexii.sh --letsgo
+```
+
+### Deployment Options
+
+```bash
+# Build only
+./scripts/deploy_marnexii.sh --build
+
+# Stage only (after build)
+./scripts/deploy_marnexii.sh --stage
+
+# Run with PM2
+./scripts/deploy_marnexii.sh --run
+
+# Stop the app
+./scripts/deploy_marnexii.sh --stop
+
+# Check status
+./scripts/deploy_marnexii.sh --status
+
+# View logs
+./scripts/deploy_marnexii.sh --logs
+
+# Use specific number of instances
+./scripts/deploy_marnexii.sh --letsgo --instances 2
+
+# Use max instances (cluster mode)
+./scripts/deploy_marnexii.sh --letsgo --max
+```
+
+**Note:** The deployment script requires sudo privileges.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

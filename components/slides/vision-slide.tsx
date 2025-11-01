@@ -62,7 +62,7 @@ export function VisionSlide({ isActive }: VisionSlideProps) {
         </div>
 
         <h2 className="text-3xl sm:text-4xl md:text-7xl font-light mb-6 sm:mb-8 md:mb-12 text-balance leading-tight">
-          Mission-Critical, <span className="text-primary">Maritime AI</span>
+          Complete maritime <span className="text-primary">observability</span> is <span className="text-accent">deterrence</span>.
         </h2>
 
         <div className="space-y-3 sm:space-y-6 md:space-y-8 text-sm sm:text-lg md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-6 sm:mb-12 md:mb-16">
@@ -71,11 +71,10 @@ export function VisionSlide({ isActive }: VisionSlideProps) {
             — a living system that senses, predicts, and acts.
           </p>
           <p className="text-balance">
-            Marnexii is the <span className="text-accent">AI-powered control and decision layer</span> for harbor
-            docking and port operations.
+            Marnexii is the <span className="text-accent">AI-powered control and decision layer</span> for sea and subsea operations, surveillance, and coordination.
           </p>
           <p className="text-balance sm:text-xl md:text-2xl">
-            As global logistics move toward autonomy, we're ensuring the oceans move with them —{" "}
+            As global logistics and security move toward autonomy, we're ensuring the oceans move with them —{" "}
             <span className="text-primary">safely, efficiently, and intelligently.</span>
           </p>
         </div>
@@ -86,18 +85,35 @@ export function VisionSlide({ isActive }: VisionSlideProps) {
         >
           <div className="inline-block p-4 sm:p-6 md:p-8 border border-primary bg-primary/5 backdrop-blur-sm">
             <div className="text-base sm:text-xl md:text-4xl font-light text-balance leading-tight">
-              <span className="text-primary">Mission-critical, maritime AI.</span>
+              <span className="text-primary">Mission-critical maritime AI for sea and subsea operations, surveillance, & drone control.</span>
               <br />
               <span className="text-muted-foreground">A sensing, predictive decision-making, and control layer.</span>
             </div>
           </div>
         </div>
 
-        {/* Logo */}
+        {/* CTA Section */}
         <div
           className={`mt-6 sm:mt-12 md:mt-16 transition-all duration-1000 delay-700 ${mounted ? "opacity-100" : "opacity-0"}`}
         >
-          <div className="text-3xl sm:text-4xl md:text-6xl font-light tracking-tight">MARNEXII</div>
+          <div className="border-t border-border pt-4 sm:pt-6 md:pt-8 max-w-3xl mx-auto">
+            <div className="text-xl sm:text-2xl md:text-3xl font-light mb-2 sm:mb-3 md:mb-4">Let's Talk</div>
+            <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-3 sm:mb-4 md:mb-6">
+              Request a demo or schedule a meeting to discuss deployment in your port or region.
+            </p>
+            <div className="text-sm sm:text-base md:text-lg text-primary">
+              <a href="mailto:roberto@marnexii.com" className="hover:text-accent transition-colors">
+                roberto@marnexii.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Logo */}
+        <div
+          className={`mt-4 sm:mt-6 md:mt-8 transition-all duration-1000 delay-900 ${mounted ? "opacity-100" : "opacity-0"}`}
+        >
+          <div className="text-2xl sm:text-3xl md:text-5xl font-light tracking-tight">MARNEXII</div>
         </div>
       </div>
     </div>

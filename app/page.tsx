@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { SlideNavigation } from "@/components/slide-navigation"
 import { TitleSlide } from "@/components/slides/title-slide"
 import { ProblemSlide } from "@/components/slides/problem-slide"
+import { CapabilitiesSlide } from "@/components/slides/capabilities-slide"
 import { ShiftSlide } from "@/components/slides/shift-slide"
 import { SolutionSlide } from "@/components/slides/solution-slide"
 import { WhyNowSlide } from "@/components/slides/why-now-slide"
@@ -19,15 +20,16 @@ import { VisionSlide } from "@/components/slides/vision-slide"
 const slides = [
   { id: 1, component: TitleSlide, title: "Mission-Critical Maritime AI" },
   { id: 2, component: ProblemSlide, title: "The Oceans Run on Blind Spots" },
-  { id: 3, component: ShiftSlide, title: "AI is Only as Good as the Data It Sees" },
-  { id: 4, component: SolutionSlide, title: "A Living Digital Twin" },
-  { id: 5, component: WhyNowSlide, title: "Maritime's Anduril Moment" },
-  { id: 6, component: TractionSlide, title: "Already Trusted by Operators" },
-  { id: 7, component: ProductSlide, title: "The System That Sees Everything" },
-  { id: 8, component: MarketSlide, title: "Trillion-Dollar System" },
-  { id: 9, component: BusinessModelSlide, title: "From Signals to Systems" },
-  { id: 10, component: TeamSlide, title: "Domain Roots. Technical Precision." },
-  { id: 11, component: VisionSlide, title: "Mission-Critical, Maritime AI" },
+  { id: 3, component: CapabilitiesSlide, title: "Complete Maritime Observability" },
+  { id: 4, component: ShiftSlide, title: "AI is Only as Good as the Data It Sees" },
+  { id: 5, component: SolutionSlide, title: "A Living Digital Twin" },
+  { id: 6, component: WhyNowSlide, title: "Maritime's Anduril Moment" },
+  { id: 7, component: TractionSlide, title: "Already Trusted by Operators" },
+  { id: 8, component: ProductSlide, title: "The System That Sees Everything" },
+  { id: 9, component: MarketSlide, title: "Trillion-Dollar System" },
+  { id: 10, component: BusinessModelSlide, title: "From Signals to Systems" },
+  { id: 11, component: TeamSlide, title: "Domain Roots. Technical Precision." },
+  { id: 12, component: VisionSlide, title: "Vision" },
 ]
 
 export default function PresentationPage() {

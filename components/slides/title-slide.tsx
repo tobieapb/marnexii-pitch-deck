@@ -44,11 +44,11 @@ export function TitleSlide({ isActive }: TitleSlideProps) {
         <h1 className="text-3xl sm:text-4xl md:text-7xl font-light tracking-tight mb-4 md:mb-8 text-balance leading-none">MARNEXII</h1>
 
         <p className="text-2xl sm:text-3xl md:text-5xl text-foreground max-w-3xl mx-auto leading-tight text-balance mb-4 md:mb-6">
-          Mission-critical maritime AI.
+          Mission-critical maritime AI for sea and subsea operations, surveillance, & drone control.
         </p>
 
         <p className="text-sm sm:text-base md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 text-balance">
-          <span className="md:whitespace-nowrap">An engineered AI model, built as a sensing, predictive decision-making, and control layer.</span>
+          A sensing, predictive decision-making, and control layer.
         </p>
 
         <div className="mt-8 md:mt-16 text-xs tracking-widest text-muted-foreground uppercase animate-pulse">
