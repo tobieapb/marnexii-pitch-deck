@@ -38,9 +38,11 @@ export function ProductSlide({ isActive }: ProductSlideProps) {
         </h2>
 
         <div className="text-center mb-4 md:mb-16 space-y-1 md:space-y-4 text-sm sm:text-base md:text-xl text-muted-foreground px-2 md:px-4">
-          <p className="text-balance">Live edge receivers. Real data. Real-time dashboards.</p>
           <p className="text-balance text-base sm:text-lg md:text-2xl text-foreground">
-            Not mockups - <span className="text-accent">operational prototypes</span> already in use.
+            Live edge receivers. Real data. Real-time dashboards.
+          </p>
+          <p className="text-balance">
+            <span className="text-accent">operational prototypes</span> already in use and under them.
           </p>
           <p className="text-balance text-xs sm:text-sm md:text-lg mt-2 md:mt-6">
             Geospatial awareness and capability to deploy cameras and drones allow detection of non-radio and non-vessel
