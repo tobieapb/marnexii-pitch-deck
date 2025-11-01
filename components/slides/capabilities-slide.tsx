@@ -127,21 +127,42 @@ export function CapabilitiesSlide({ isActive }: CapabilitiesSlideProps) {
             ))}
           </div>
 
-          {/* Mobile/Tablet Horizontal Scroll */}
-          <div className="md:hidden overflow-x-auto scrollbar-hide snap-x snap-mandatory">
-            <div className="flex gap-3 pb-4">
-              {applications.map((app, index) => (
-                <div
-                  key={app.title}
-                  className={`flex-shrink-0 w-[85vw] sm:w-[70vw] p-4 border border-border bg-card/30 backdrop-blur-sm snap-center transition-all duration-500 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-                  style={{ transitionDelay: `${400 + index * 100}ms` }}
-                >
-                  <h3 className="text-base sm:text-lg font-light mb-2 text-foreground">{app.title}</h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                    {app.description}
-                  </p>
-                </div>
-              ))}
+          {/* Mobile Horizontal Scroll - 2 rows with peek effect */}
+          <div className="md:hidden space-y-3">
+            {/* Row 1: First 3 cards */}
+            <div className="overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+              <div className="flex gap-3 px-2">
+                {applications.slice(0, 3).map((app, index) => (
+                  <div
+                    key={app.title}
+                    className={`flex-shrink-0 w-[47vw] p-3 sm:p-4 border border-border bg-card/30 backdrop-blur-sm snap-center transition-all duration-500 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                    style={{ transitionDelay: `${400 + index * 100}ms` }}
+                  >
+                    <h3 className="text-sm sm:text-base font-light mb-1.5 sm:mb-2 text-foreground leading-tight">{app.title}</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                      {app.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Row 2: Last 3 cards */}
+            <div className="overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+              <div className="flex gap-3 px-2 pb-4">
+                {applications.slice(3, 6).map((app, index) => (
+                  <div
+                    key={app.title}
+                    className={`flex-shrink-0 w-[47vw] p-3 sm:p-4 border border-border bg-card/30 backdrop-blur-sm snap-center transition-all duration-500 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                    style={{ transitionDelay: `${400 + (index + 3) * 100}ms` }}
+                  >
+                    <h3 className="text-sm sm:text-base font-light mb-1.5 sm:mb-2 text-foreground leading-tight">{app.title}</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                      {app.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
