@@ -52,7 +52,7 @@ export function ProblemSlide({ isActive }: ProblemSlideProps) {
           <p className="text-balance">
             Yet most ports operate on{" "}
             <span className="text-foreground">
-              lagging, incomplete, or manually <em>"written on scratch-pad"</em> data.
+              lagging, incomplete, or manually <em>"written on scratch-pads"</em> data.
             </span>
           </p>
           <p className="text-balance">
