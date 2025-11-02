@@ -28,7 +28,7 @@ export function TeamSlide({ isActive }: TeamSlideProps) {
 
       {/* Content */}
       <div
-        className={`relative z-10 w-full max-w-5xl mx-auto px-4 md:px-8 pt-16 md:pt-24 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        className={`relative z-10 w-full max-w-5xl mx-auto px-4 md:px-8 pt-20 sm:pt-24 md:pt-24 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
         <h2 className="text-xl sm:text-2xl md:text-6xl font-light mb-3 sm:mb-4 md:mb-8 text-balance leading-tight text-center">
           Domain Roots. <span className="text-primary">Technical Precision.</span>

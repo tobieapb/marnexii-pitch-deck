@@ -77,9 +77,7 @@ export function MarketSlide({ isActive }: MarketSlideProps) {
         <div className="text-center p-3 sm:p-4 md:p-8 border border-primary bg-primary/5 backdrop-blur-sm">
           <p className="text-sm sm:text-base md:text-2xl text-balance leading-relaxed">
             By fusing real-time signals into predictive control, we unlock value across{" "}
-            <span className="text-primary">every maritime operation</span>. From docking to dispatch, terminal
-            management, port operations, and offshore law enforcement interest including unsanctioned fuel transfers and
-            illicit rendezvous.
+            <span className="text-primary">every maritime operation</span>, from port logistics to subsea infrastructure and security.
           </p>
         </div>
       </div>
