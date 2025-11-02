@@ -98,8 +98,10 @@ export function CapabilitiesSlide({ isActive }: CapabilitiesSlideProps) {
       <div
         className={`relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 pt-12 sm:pt-16 md:pt-20 pb-2 md:pb-8 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
-        <br />
-        <br />
+        <div className="md:hidden">
+          <br />
+          <br />
+        </div>
         <h2 className="text-3xl sm:text-4xl md:text-6xl font-light mb-3 sm:mb-4 md:mb-6 text-center text-balance leading-tight">
           Complete maritime <span className="text-primary">observability</span> is{" "}
           <span className="text-accent">deterrence</span>.
