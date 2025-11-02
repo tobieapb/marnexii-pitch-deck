@@ -62,7 +62,7 @@ export function VisionSlide({ isActive }: VisionSlideProps) {
         </div>
 
         <h2 className="text-3xl sm:text-4xl md:text-7xl font-light mb-6 sm:mb-8 md:mb-12 text-balance leading-tight">
-          Complete maritime <span className="text-primary">observability</span> is <span className="text-accent">deterrence</span>.
+          Complete <span className="text-primary whitespace-nowrap">maritime observability</span> is <span className="text-accent">deterrence</span>.
         </h2>
 
         <div className="space-y-3 sm:space-y-6 md:space-y-8 text-sm sm:text-lg md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-6 sm:mb-12 md:mb-16">
