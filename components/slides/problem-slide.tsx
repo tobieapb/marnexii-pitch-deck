@@ -56,8 +56,7 @@ export function ProblemSlide({ isActive }: ProblemSlideProps) {
             Operators and regulators make decisions <span className="text-foreground">hours or days late.</span>
           </p>
           <p className="text-balance mt-6 md:mt-8 text-xl sm:text-2xl md:text-3xl text-foreground">
-            They're managing the world's most complex, critical, and delicate logistics infrastructure -{" "}
-            <span className="text-destructive">blindfolded.</span>
+            They're managing the world's most complex, critical, and delicate logistics infrastructure,... <span className="text-destructive">blindfolded.</span>
           </p>
           <p className="text-balance mt-6 md:mt-8">
             Turns out that the Oceans Run on <span className="text-muted-foreground">Blind Spots</span>
