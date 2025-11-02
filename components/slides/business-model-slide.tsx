@@ -28,14 +28,14 @@ export function BusinessModelSlide({ isActive }: BusinessModelSlideProps) {
       number: "2",
       title: "Predictive Modules",
       description:
-        "Real-time analytics and anomaly detection designed to plug into [TBD] Integration Partners, ERPs, or port systems.",
+        "Real-time analytics and anomaly detection designed to plug into [TBD] Integration Partners, ERPs, port systems, and assets under port or security operator control.",
       color: "border-primary",
       delay: "400ms",
     },
     {
       number: "3",
       title: "AI Control Layer",
-      description: "Fleet- and port-level decision intelligence, powering scheduling, routing, and automation.",
+      description: "Intelligence across fleet, port, sea, and subsea operations, powering surveillance, scheduling, routing, automation, and interdiction cues for assets.",
       color: "border-foreground",
       delay: "600ms",
     },
