@@ -94,7 +94,7 @@ export function VisionSlide({ isActive }: VisionSlideProps) {
             </p>
             <a
               href="mailto:roberto@marnexii.com"
-              className="inline-block px-6 sm:px-8 md:px-10 py-3 sm:py-4 border border-primary bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-sm sm:text-base md:text-lg font-light"
+              className="inline-block px-6 sm:px-8 md:px-10 py-3 sm:py-4 border border-primary bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-sm sm:text-base md:text-lg font-light rounded-[6px]"
             >
               Let's Talk
             </a>

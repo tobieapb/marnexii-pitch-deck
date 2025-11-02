@@ -65,6 +65,9 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
             <p className="text-balance">
               Live ingestion, analytics, and visualization prototypes <span className="text-accent">deployed.</span>
             </p>
+            <p className="text-balance text-xs sm:text-sm md:text-base text-foreground">
+              Product: Maritime AI and sensor network data infrastructure.
+            </p>
             <p className="text-balance text-xs sm:text-sm md:text-base italic mt-3 sm:mt-4 md:mt-6 text-muted-foreground/80">
               * Under NDA - will be disclosed at launch
             </p>
@@ -76,7 +79,7 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
             Live Product Video
             <span className="block text-xs mt-1 text-accent">
               Note: The visualization shown is an internal monitoring tool developed by MARNEXII to show what the system
-              is currently perceiving, not the final product interface.
+              is currently perceiving. The product is the maritime AI, and the data from the sensor network.
             </span>
           </div>
           <a
