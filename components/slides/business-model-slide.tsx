@@ -76,7 +76,7 @@ export function BusinessModelSlide({ isActive }: BusinessModelSlideProps) {
         {/* Value proposition */}
         <div className="mt-6 sm:mt-8 md:mt-12 text-center p-4 sm:p-6 md:p-8 border border-accent bg-accent/5 backdrop-blur-sm">
           <p className="text-base sm:text-lg md:text-2xl text-balance leading-relaxed">
-            Each layer compounds: the more signals we own, the <span className="text-accent">smarter every connected system becomes.</span>
+            Each layer compounds. The more signals we own, the <span className="text-accent">smarter every connected system becomes.</span>
           </p>
         </div>
       </div>
