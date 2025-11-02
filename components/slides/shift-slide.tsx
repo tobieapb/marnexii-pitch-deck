@@ -61,7 +61,7 @@ export function ShiftSlide({ isActive }: ShiftSlideProps) {
           </h2>
 
           <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-            <p className="text-balance">AI can't predict what it can't perceive.</p>
+            <p className="text-balance">AI cannot predict what it cannot perceive.</p>
             <p className="text-balance">
               Maritime systems lack <span className="text-foreground">continuous, high-fidelity ground truth.</span>
             </p>
