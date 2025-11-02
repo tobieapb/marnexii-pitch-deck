@@ -74,7 +74,7 @@ export function TeamSlide({ isActive }: TeamSlideProps) {
               </p>
               <p className="text-balance">
                 • Deep technical expertise in{" "}
-                <span className="text-foreground">PostgreSQL/PostGIS, data ingestion, and real-time analytics.</span>
+                <span className="text-foreground">PostgreSQL/PostGIS, data ingestion, real-time analytics, ML and AI.</span>
               </p>
             </div>
 
