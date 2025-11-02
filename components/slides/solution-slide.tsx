@@ -80,7 +80,7 @@ export function SolutionSlide({ isActive }: SolutionSlideProps) {
             It serves as a <span className="text-accent">sensing, predictive decision-making, and control layer.</span>
           </p>
           <p className="text-balance text-lg sm:text-xl md:text-2xl text-foreground mt-6 md:mt-8">
-            From dock operations to fleet movements and global surveillance, <span className="text-primary">one real-time view</span> of the maritime system.
+            From dock operations to fleet movements and global surveillance. <span className="text-primary">One real-time view</span> of the global maritime waterways and underneath.
           </p>
         </div>
       </div>
