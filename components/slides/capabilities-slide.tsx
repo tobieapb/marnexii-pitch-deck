@@ -103,12 +103,12 @@ export function CapabilitiesSlide({ isActive }: CapabilitiesSlideProps) {
           <span className="text-accent">deterrence</span>.
         </h2>
 
-        <p className="text-sm sm:text-base md:text-xl text-muted-foreground text-center mb-6 sm:mb-8 md:mb-12 max-w-4xl mx-auto">
+        <p className="text-sm sm:text-base md:text-xl text-muted-foreground text-center mb-3 sm:mb-6 md:mb-12 max-w-4xl mx-auto">
           A multimodal AI built to see what up until now is invisible.
         </p>
 
         {/* Sensor Suite - Now First */}
-        <div className="border-b border-border pb-4 sm:pb-6 md:pb-8 mb-6 sm:mb-8 md:mb-10">
+        <div className="border-b border-border pb-4 sm:pb-6 md:pb-8 mb-3 sm:mb-6 md:mb-10">
           <h3 className="text-lg sm:text-xl md:text-2xl font-light mb-3 sm:mb-4 md:mb-6 text-center text-muted-foreground">
             Sensor Suite Across All Products
           </h3>
