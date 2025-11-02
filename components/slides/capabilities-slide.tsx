@@ -96,7 +96,7 @@ export function CapabilitiesSlide({ isActive }: CapabilitiesSlideProps) {
 
       {/* Content */}
       <div
-        className={`relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 pt-12 sm:pt-16 md:pt-20 pb-8 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        className={`relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 pt-12 sm:pt-16 md:pt-20 pb-2 md:pb-8 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
         <h2 className="text-3xl sm:text-4xl md:text-6xl font-light mb-3 sm:mb-4 md:mb-6 text-center text-balance leading-tight">
           Complete maritime <span className="text-primary">observability</span> is{" "}
@@ -192,7 +192,7 @@ export function CapabilitiesSlide({ isActive }: CapabilitiesSlideProps) {
               <ChevronRight className="absolute right-1 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground/50 z-10 pointer-events-none animate-pulse" />
 
               <div ref={row2Ref} className="overflow-x-auto scrollbar-hide snap-x snap-mandatory">
-                <div className="flex gap-3 px-2 pb-4">
+                <div className="flex gap-3 px-2 pb-2">
                   {applications.slice(3, 6).map((app, index) => (
                     <div
                       key={app.title}
