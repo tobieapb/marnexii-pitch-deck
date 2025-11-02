@@ -16,7 +16,7 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
     }
   }, [isActive])
 
-  const partners = ["* Tug operator with over 50 vessels", "* Tug operator with 10 vessels", "* Integration Partners"]
+  const partners = ["Tug operator with over 50 vessels*", "Tug operator with 10 vessels*", "Integration Partners*"]
 
   return (
     <div className="relative h-full w-full flex items-start justify-center overflow-y-auto">
@@ -80,13 +80,13 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
             </span>
           </div>
           <a
-            href="https://x.com/tobieapb/status/1982900207298998482"
+            href="https://x.com/tobieapb/status/1985054096978841910"
             target="_blank"
             rel="noopener noreferrer"
             className="block relative aspect-video bg-secondary/30 rounded overflow-hidden group cursor-pointer"
           >
             <img
-              src="/sf-bay-vessel-tracking-with-trackline.jpeg"
+              src="/product_demo_thumbnail.png"
               alt="Product demo video preview showing vessel tracking with red trackline in San Francisco Bay"
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             />

@@ -103,7 +103,7 @@ export function CapabilitiesSlide({ isActive }: CapabilitiesSlideProps) {
           <br />
         </div>
         <h2 className="text-3xl sm:text-4xl md:text-6xl font-light mb-3 sm:mb-4 md:mb-6 text-center text-balance leading-tight">
-          Complete maritime <span className="text-primary">observability</span> is{" "}
+          Complete <span className="text-primary whitespace-nowrap">maritime observability</span> is{" "}
           <span className="text-accent">deterrence</span>.
         </h2>
 
