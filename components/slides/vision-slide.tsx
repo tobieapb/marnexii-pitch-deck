@@ -66,9 +66,6 @@ export function VisionSlide({ isActive }: VisionSlideProps) {
         </h2>
 
         <div className="space-y-3 sm:space-y-6 md:space-y-8 text-sm sm:text-lg md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-6 sm:mb-12 md:mb-16">
-          <p className="text-balance">
-            We're building a <span className="text-foreground">real-time digital twin of maritime ports, ships, sea, and subsea</span>: a living system that senses, predicts, and acts.
-          </p>
           <p className="text-balance sm:text-xl md:text-2xl">
             As global logistics and security move toward autonomy, we're ensuring the oceans move with them: <span className="text-primary">safely, efficiently, and intelligently.</span>
           </p>
