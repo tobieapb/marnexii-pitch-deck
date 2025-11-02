@@ -42,11 +42,11 @@ export function ProductSlide({ isActive }: ProductSlideProps) {
             Live edge receivers. Real data. Real-time dashboards.
           </p>
           <p className="text-balance">
-            <span className="text-accent">Operational prototypes</span> already in use and under them.
+            <span className="text-accent">Operational prototypes</span> already in use.
           </p>
           <p className="text-balance text-xs sm:text-sm md:text-lg mt-2 md:mt-6">
             Geospatial awareness and capability to deploy cameras and drones allow detection of non-radio and non-vessel
-            objects in the waterways.
+            objects in the waterways and under them.
           </p>
         </div>
 
