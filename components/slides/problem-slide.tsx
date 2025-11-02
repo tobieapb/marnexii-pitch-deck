@@ -42,13 +42,10 @@ export function ProblemSlide({ isActive }: ProblemSlideProps) {
         className={`relative z-10 max-w-5xl mx-auto px-4 md:px-8 transition-all duration-1000 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
         <h2 className="text-3xl sm:text-4xl md:text-7xl font-light mb-6 md:mb-12 text-balance leading-tight">
-          90% of global trade moves by sea, and will <span className="text-primary">always do so</span>.
+          90% of global food, goods, and medicines move by sea, and will <span className="text-primary">always do so</span>.
         </h2>
 
         <div className="space-y-4 md:space-y-6 text-base sm:text-lg md:text-2xl text-muted-foreground leading-relaxed">
-          <p className="text-balance">
-            The Oceans Run on <span className="text-muted-foreground">Blind Spots</span>
-          </p>
           <p className="text-balance">
             Yet most ports operate on{" "}
             <span className="text-foreground">
@@ -61,6 +58,9 @@ export function ProblemSlide({ isActive }: ProblemSlideProps) {
           <p className="text-balance mt-6 md:mt-8 text-xl sm:text-2xl md:text-3xl text-foreground">
             They're managing the world's most complex, critical, and delicate logistics infrastructure -{" "}
             <span className="text-destructive">blindfolded.</span>
+          </p>
+          <p className="text-balance mt-6 md:mt-8">
+            Turns out that the Oceans Run on <span className="text-muted-foreground">Blind Spots</span>
           </p>
         </div>
 
