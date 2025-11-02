@@ -1,0 +1,66 @@
+# MARNEXII Pitch Deck Project Rules
+
+## Critical Validation Rule: Visible Changes Must Match Code Changes
+
+**Every change that affects what the user sees MUST be validated before considering the work complete.**
+
+### When This Rule Applies:
+- Changing slide headings, titles, or any displayed text
+- Updating taglines, descriptions, or messaging
+- Modifying navigation titles or labels
+- Any content that appears in the UI
+
+### Required Validation Steps:
+
+1. **Identify ALL locations** where the content appears:
+   - Search the codebase for the exact text being changed
+   - Check both navigation/metadata AND actual rendered components
+   - Example: Slide titles appear in BOTH `app/page.tsx` (navigation) AND in the slide component itself (e.g., `components/slides/solution-slide.tsx`)
+
+2. **Update ALL locations** that need to match:
+   - Don't assume updating one location updates all locations
+   - Each component file is independent
+   - Navigation titles and slide headings are separate
+
+3. **Verify the change** before marking complete:
+   - Read back the affected files to confirm changes were applied
+   - Check that both visible text AND any metadata match
+   - If uncertain, explicitly ask the user to confirm they see the change
+
+### Examples of This Rule in Action:
+
+**❌ INCORRECT:**
+- User asks to change slide 5 title to include "Sea, and Subsea"
+- Update only `app/page.tsx` navigation title
+- Assume it's complete without checking the actual slide component
+
+**✅ CORRECT:**
+- User asks to change slide 5 title to include "Sea, and Subsea"
+- Search for the current text "A Living Digital Twin of Ports and Ships"
+- Find it appears in BOTH:
+  - `app/page.tsx` line 25 (navigation title)
+  - `components/slides/solution-slide.tsx` line 71 (actual heading)
+- Update BOTH locations
+- Read back both files to verify changes applied
+
+### Validation Checklist Before Committing:
+- [ ] Searched codebase for all instances of the text being changed
+- [ ] Updated all locations where the content appears
+- [ ] Verified changes by reading back the affected files
+- [ ] Considered navigation titles, slide headings, and any other metadata
+- [ ] If the change involves capitalization, grammar, or punctuation, reviewed it carefully
+
+## Additional Rules:
+
+### Capitalization
+- Always capitalize the first word of a sentence
+- Review capitalization when making text edits
+
+### Deployment
+- NEVER offer to build the project
+- User will handle deployment via `./scripts/deploy_marnexii.sh --letsgo --noci`
+
+### Commit Messages
+- Use conventional commit format
+- Include clear description of what changed
+- Always include Claude Code attribution
