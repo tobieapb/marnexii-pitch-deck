@@ -59,9 +59,6 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
 
           <div className="space-y-2 sm:space-y-3 md:space-y-4 text-xs sm:text-sm md:text-lg text-muted-foreground leading-relaxed">
             <p className="text-balance">
-              Integration partnerships with <span className="text-foreground">[TBD] Integration Partners.</span>
-            </p>
-            <p className="text-balance">
               Active build at <span className="text-primary">Fort Mason</span> (personally in San Francisco until Nov
               8th for Founders, Inc's Blueprint).
             </p>
@@ -75,12 +72,12 @@ export function TractionSlide({ isActive }: TractionSlideProps) {
           <div className="text-xs md:text-sm text-muted-foreground mb-1 sm:mb-2 md:mb-3">
             Live Product Video
             <span className="block text-xs mt-1 text-accent">
-              Note: The visualization shown is an internal monitoring tool developed by MARNEXII to see what the system
+              Note: The visualization shown is an internal monitoring tool developed by MARNEXII to show what the system
               is currently perceiving, not the final product interface.
             </span>
           </div>
           <a
-            href="https://x.com/tobieapb/status/1977169350428934267"
+            href="https://x.com/tobieapb/status/1982900207298998482"
             target="_blank"
             rel="noopener noreferrer"
             className="block relative aspect-video bg-secondary/30 rounded overflow-hidden group cursor-pointer"
